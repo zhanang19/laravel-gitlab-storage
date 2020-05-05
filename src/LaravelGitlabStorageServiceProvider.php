@@ -17,7 +17,7 @@ class LaravelGitlabStorageServiceProvider extends ServiceProvider
     {
         Storage::extend('gitlab', function ($app, $config) {
             $client = new Client(
-                $config['personal_access_token'],
+                $config['access_token'],
                 $config['project_id'],
                 $config['branch'],
                 $config['base_url']
